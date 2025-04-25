@@ -30,5 +30,8 @@ namespace DS_A.Algorithms.Search
             return -1;
 
         }
+
+        // BEST CASE -> O(1)
+        // AVG & WORST CASE -> O(LOG N)
     }
 }
