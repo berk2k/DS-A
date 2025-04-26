@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DS_A.Algorithms.Sorting
 {
+    // WORST,BEST,AVG -> O(N**2)
     public class SelectionSort
     {
         public static void Sort<T>(T[] array) where T : IComparable<T> 
