@@ -64,16 +64,16 @@ namespace DS_A.DS.BinaryTree
             }
             else
             {
-                // 1. Leaf
+                
                 if (root.Left == null && root.Right == null)
                     return null;
 
-                // 2. Single child
+                
                 if (root.Left == null)
                     return root.Right;
                 else if (root.Right == null)
                     return root.Left;
-                // 3. two child: inorder successor
+                
                 else
                 {
                     TreeNode minNode = FindMin(root.Right);
