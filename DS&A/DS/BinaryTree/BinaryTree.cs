@@ -19,9 +19,31 @@ namespace DS_A.DS.BinaryTree
             Root = InsertRecursiveBST(Root, value);
         }
 
+        void InsertIterative(TreeNode root, int value)
+        {
+            TreeNode newNode = new TreeNode(value);
+            TreeNode current = root;
+            TreeNode parent = null;
+
+            while (current != null)
+            {
+                parent = current;
+                if (value < current.Value)
+                    current = current.Left;
+                else
+                    current = current.Right;
+            }
+
+            // Insert the new node in the correct spot
+            if (value < parent.Value)
+                parent.Left = newNode;
+            else
+                parent.Right = newNode;
+        }
+
         private TreeNode InsertRecursiveBST(TreeNode node, int value)
         {
-            if (node == null) { return new TreeNode(value)};
+            if (node == null) { return new TreeNode(value); };
 
             if (value < node.Value)
             {
@@ -90,6 +112,29 @@ namespace DS_A.DS.BinaryTree
             while (node.Left != null)
                 node = node.Left;
             return node;
+        }
+
+        private TreeNode FindMax(TreeNode node) 
+        {
+
+            while(node.Right != null)
+            {
+                node = node.Right;
+            }
+
+            return node;
+        
+        }
+
+        private int FindHeight(TreeNode root)
+        {
+            if(root  == null) return 0;
+
+            int lh = FindHeight(root.Left);
+            int rh = FindHeight(root.Right);
+            int th = 1 + int.Max(lh,rh);
+
+            return th;
         }
     }
 
