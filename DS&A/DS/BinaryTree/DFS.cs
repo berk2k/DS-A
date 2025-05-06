@@ -69,6 +69,22 @@ namespace DS_A.DS.BinaryTree
 
 
             }
+
+            //public IList<int> PostorderTraversal(TreeNode root)
+            //{
+            //    List<int> list = new List<int>();
+            //    PostorderHelper(root, list);
+
+            //    return list;
+            //}
+
+            //private void PostorderHelper(TreeNode node, List<int> list)
+            //{
+            //    if (node == null) return;
+            //    PostorderHelper(node.left, list);
+            //    PostorderHelper(node.right, list);
+            //    list.Add(node.val);
+            //}
             public void IterativePostorderDFS()
             {
                 if (Root == null) return;
@@ -106,6 +122,20 @@ namespace DS_A.DS.BinaryTree
                 InOrder(node.Right);
 
             }
+            //public IList<int> InorderTraversal(TreeNode root)
+            //{
+            //    List<int> list = new List<int>();
+            //    InorderHelper(root, list);
+            //    return list;
+            //}
+
+            //private void InorderHelper(TreeNode node, List<int> list)
+            //{
+            //    if (node == null) return;
+            //    InorderHelper(node.left, list);
+            //    list.Add(node.val);
+            //    InorderHelper(node.right, list);
+            //}
 
             public void IterativeInorderDFS()
             {
